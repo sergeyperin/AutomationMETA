@@ -8,18 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
-import java.io.File;
-
 public class Common {
 
-    private static final String projectPath = System.getProperty("user.dir");
-    private static final String separator = System.getProperty("path.separator");
-    private static final String resourcesPath = projectPath + "src" + separator + "main" + separator + "resources" + separator;
-    private static WebDriver driver;
 
-    public static String getResoursesPath() {
-        return resourcesPath;
-    }
+    private static WebDriver driver;
 
     public static void click(WebElement element){
         element.click();

@@ -7,9 +7,9 @@ import page.LoginPage;
 import utils.Common;
 import utils.DriverUtil;
 
-import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-public class LoginTests {
+public class LoginTests{
 
     private HomePage homePage;
     private LoginPage loginPage;
