@@ -22,7 +22,7 @@ public class LoginTests{
     }
     
     @AfterClass
-    public before(){
+    public after(){
         DriverUtil.getInstance().getDriver().dispose();
     }
 
