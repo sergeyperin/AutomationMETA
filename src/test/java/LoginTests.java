@@ -13,11 +13,23 @@ public class LoginTests{
 
     private HomePage homePage;
     private LoginPage loginPage;
+    private WebDriver driver;
+    
+    
+    @BeforeClass
+    public before(){
+        driver = DriverUtil.getInstance().getDriver();
+    }
+    
+    @AfterClass
+    public before(){
+        DriverUtil.getInstance().getDriver().dispose();
+    }
 
     @Before
     public void setUp() {
-        DriverUtil.getInstance().getDriver().get("https://meta.ua/");
-        homePage = new HomePage(DriverUtil.getInstance().getDriver());
+        driver.get("https://meta.ua/");
+        homePage = new HomePage(driver);
 //        loginPage = new LoginPage(DriverUtil.getInstance().getDriver());
     }
 
