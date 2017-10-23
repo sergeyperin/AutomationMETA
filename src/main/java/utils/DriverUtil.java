@@ -21,15 +21,13 @@ public class DriverUtil {
 
     }
 
-    static {
-        init();
-    }
+  
 
     public static DriverUtil getInstance() {
         return driverUtil;
     }
 
-    private static void init() {
+    private  void init() {
         String browser = System.getProperty("browser");
         try {
             switch (browser) {
@@ -54,8 +52,12 @@ public class DriverUtil {
         }
     }
 
-    public final WebDriver getDriver() {
-        return driver;
+    public WebDriver getDriver() {
+        this.driver = init();
+    }
+    
+      public void disposeDriver() {
+        this.driver.quit();
     }
 
 
